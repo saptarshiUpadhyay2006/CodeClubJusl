@@ -6,7 +6,7 @@ function Hero() {
     <div className="flex w-full flex-col items-center gap-y-6 bg-black min-h-screen">
       <h1 className="text-center text-7xl lg:text-[11vw] mt-8 lg:mt-4 font-semibold">CodeClub JUSL</h1>
       <div className="flex h-fit w-11/12 items-center justify-between border-red-500 text-gray-300/90">
-        <p className="p-3">[2019]</p>
+        <p className="p-3">[2018]</p>
         <div className="h-[1px] w-full bg-gray-300/50"></div>
         <p className="p-3">[NOW]</p>
       </div>
