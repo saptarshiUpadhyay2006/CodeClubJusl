@@ -4,12 +4,12 @@ import React from "react";
 function Contact() {
   return (
     <div id="contact" className="absolute flex w-full flex-col items-center bg-black p-12 pb-0">
-      <h1 className="text-5xl lg:text-8xl font-bold uppercase">Contact Us</h1>
-      <div className="grid w-full place-items-center sm:grid-cols-2 gap-8">
+      <h1 className="text-6xl lg:text-8xl font-bold uppercase text-center">Contact Us</h1>
+      <div className="grid w-full place-items-center sm:grid-cols-2 gap-x-8">
         <iframe
           style={{
             borderRadius: "4px",
-            marginBlock: "4rem",
+            marginBlock: "2rem",
             justifySelf: "center",
           }}
           height="400"
@@ -39,8 +39,8 @@ function Contact() {
 
       {/* Footer */}
       <footer className="grid h-full w-full lg:grid-cols-2 place-items-center border-t border-t-gray-300/50 py-4">
-        <h1 className="text-5xl lg:text-6xl 2xl:text-8xl font-semibold text-center">CodeClub JUSL</h1>
-        <nav className="flex flex-col gap-y-1 lg:gap-y-3 text-center text-lg lg:text-xl 2xl:font-medium tracking-wide uppercase py-3">
+        <h1 className="text-3xl lg:text-6xl 2xl:text-8xl font-semibold text-center">CodeClub JUSL</h1>
+        <nav className="flex flex-col gap-y-1 lg:gap-y-3 text-center text-lg lg:text-xl 2xl:font-medium tracking-wide uppercase pt-3">
           <Link href={"/"}>Home</Link>
           <Link href={"/#events"}>Events</Link>
         </nav>

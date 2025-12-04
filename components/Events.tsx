@@ -3,7 +3,7 @@ import React from "react";
 function Events() {
   return (
     <div id="events" className="flex w-full flex-col items-center gap-y-20 bg-black py-8">
-      <h1 className="text-8xl font-semibold">EVENTS</h1>
+      <h1 className="text-6xl sm:text-8xl font-semibold">EVENTS</h1>
       <ul className="flex w-5/6 flex-col gap-y-6 lg:w-4/5 2xl:w-3/5 2xl:gap-y-12">
         <li className="flex flex-col gap-2">
           <span className="text-xl font-semibold">H42</span>
