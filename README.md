@@ -1,4 +1,4 @@
-# CodeClub JUSL
+# CodeClub JUSL Website
 
 > Official website for CodeClub Jadavpur University SaltLake Campus
 
