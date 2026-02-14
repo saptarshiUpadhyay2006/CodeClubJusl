@@ -15,7 +15,7 @@ function TeamControls({ team, event }: { team: Team; event: Event }) {
 
   const whatsappMessage = encodeURIComponent(`Join me for ${event.name} at Srijan 2026!
 
-Go to ${SERVER_URL}/eventRegistration/${event.slug} and use this code - ${team.joiningCode}
+Go to ${SERVER_URL}/eventRegistration/${event.slug} and use this code - *${team.joiningCode}*
 
 or, click on this link - ${SERVER_URL}/eventRegistration/${event.slug}?joiningCode=${team.joiningCode}`);
 
