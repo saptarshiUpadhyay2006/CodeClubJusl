@@ -16,6 +16,7 @@ const getUserByEmail = async (email: string | null) => {
     include: {
       teams: {
         select: {
+          id: true,
           name: true,
           eventSlug: true,
           event: true
@@ -23,6 +24,7 @@ const getUserByEmail = async (email: string | null) => {
       },
       pendingTeams: {
         select: {
+          id: true,
           name: true,
           eventSlug: true,
           event: true
@@ -33,10 +35,10 @@ const getUserByEmail = async (email: string | null) => {
   return user;
 };
 
-const validateUser = async (user: User | null, password: string) => {
-  if (!user || !user.password) return false;
+const validateUser = async (existingPassword: string | null, password: string) => {
+  if (!existingPassword) return false;
 
-  const passwordMatch = await bcrypt.compare(password, user.password);
+  const passwordMatch = await bcrypt.compare(password, existingPassword);
 
   if (!passwordMatch) return false;
   return true;

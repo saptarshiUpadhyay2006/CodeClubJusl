@@ -44,7 +44,7 @@ export const { handlers, signIn, signOut, auth, unstable_update } = NextAuth({
 
         if (!user) return null;
 
-        const isValid = await validateUser(user, password);
+        const isValid = await validateUser(user.password, password);
         if (isValid) return user;
 
         return null;

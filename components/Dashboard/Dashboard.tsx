@@ -2,12 +2,34 @@
 
 import { signOut } from "next-auth/react";
 import React from "react";
-import { User } from "@/types/user";
 import Image from "next/image";
-import { Team } from "@/types/events";
 import Link from "next/link";
+import { UserRole } from "@prisma/client";
+import { Event } from "@/types/events";
 
-function Dashboard({ user }: { user: User }) {
+type DashboardTeam = {
+  id: string;
+  name: string;
+  eventSlug: string;
+  event: Event;
+}
+
+type DashboardUser = {
+  id: string;
+  name: string;
+  email: string;
+  image: string | null;
+  role: UserRole;
+  createdAt: Date;
+  college: string | null;
+  department: string | null;
+  year: string | null;
+  phone: string | null;
+  teams: DashboardTeam[];
+  pendingTeams: DashboardTeam[]
+}
+
+function Dashboard({ user }: { user: DashboardUser }) {
   const handleLogout = () => {
     signOut({
       redirectTo: "/signin",
@@ -164,7 +186,7 @@ function Dashboard({ user }: { user: User }) {
               </div>
               {item.data && item.data.length > 0 && (
                 <div className="mt-4 flex flex-wrap gap-2 border-t border-white/10 pt-4">
-                  {item.data.map((team: Team, idx: number) => (
+                  {item.data.map((team: DashboardTeam, idx: number) => (
                     <Link href={`/eventRegistration/${team.eventSlug}`}
                       key={`${team.id}-${idx}`}
                       className="border border-white/30 px-3 py-1.5 font-mono text-xs text-white/70 transition-colors hover:border-red-400 hover:text-white"
