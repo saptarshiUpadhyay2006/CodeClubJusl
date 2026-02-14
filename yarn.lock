@@ -1218,7 +1218,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prisma/client@npm:^6.19.0":
+"@prisma/client@npm:6.19":
   version: 6.19.2
   resolution: "@prisma/client@npm:6.19.2"
   peerDependencies:
@@ -2653,7 +2653,7 @@ __metadata:
     "@auth/prisma-adapter": "npm:^2.11.1"
     "@eslint/eslintrc": "npm:^3"
     "@hcaptcha/react-hcaptcha": "npm:^2.0.2"
-    "@prisma/client": "npm:^6.19.0"
+    "@prisma/client": "npm:6.19"
     "@tailwindcss/postcss": "npm:^4.1.18"
     "@types/node": "npm:^20"
     "@types/nodemailer": "npm:^7"
@@ -2662,13 +2662,14 @@ __metadata:
     bcryptjs: "npm:^3.0.3"
     eslint: "npm:^9"
     eslint-config-next: "npm:15.5.2"
+    lucide-react: "npm:^0.564.0"
     next: "npm:^15.5.7"
     next-auth: "npm:^5.0.0-beta.30"
     nodemailer: "npm:^7.0.12"
     postcss: "npm:^8.5.6"
     prettier: "npm:^3.6.2"
     prettier-plugin-tailwindcss: "npm:^0.6.14"
-    prisma: "npm:^6.19.0"
+    prisma: "npm:6.19"
     react: "npm:19.1.0"
     react-dom: "npm:19.1.0"
     react-hot-toast: "npm:^2.6.0"
@@ -4299,6 +4300,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lucide-react@npm:^0.564.0":
+  version: 0.564.0
+  resolution: "lucide-react@npm:0.564.0"
+  peerDependencies:
+    react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10c0/b2f58ed64d98102ab49d78956200958afcd30a033f3e2c3fc47b4890317d6c41671592f4ca5840e6884d973e4b193c01e42a72fb39c62d5c080d7725b21dc249
+  languageName: node
+  linkType: hard
+
 "magic-string@npm:^0.30.21":
   version: 0.30.21
   resolution: "magic-string@npm:0.30.21"
@@ -4839,7 +4849,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prisma@npm:^6.19.0":
+"prisma@npm:6.19":
   version: 6.19.2
   resolution: "prisma@npm:6.19.2"
   dependencies:

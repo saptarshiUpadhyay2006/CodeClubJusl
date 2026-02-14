@@ -1,11 +1,13 @@
 "use client";
+
 import Loading from "@/components/Loading";
 import Tooltip from "@/components/Tooltip";
 import {
   resetPassword,
   verifyPasswordResetToken,
 } from "@/services/UserService";
-import { useRouter, useSearchParams } from "next/navigation";
+import { Info } from "lucide-react";
+import { redirect, useRouter, useSearchParams } from "next/navigation";
 import React, { Suspense, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import z from "zod";
@@ -23,7 +25,7 @@ const PasswordResetSchema = z
     password: z
       .string()
       .regex(
-        RegExp("^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"),
+        /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/,
         "Weak Password",
       ),
     confirmPassword: z.string(),
@@ -60,13 +62,18 @@ function ResetPassword() {
       });
   }, [token, router]);
 
+  if (!token) {
+    router.push("/404");
+    return;
+  }
+
   const handleChange = (field: string, value: string) => {
     setData((oldData) => ({ ...oldData, [field]: value }));
   };
 
   const handleSubmit = () => {
     setLoading(true);
-    setErrors({password: "", confirmPassword: ""});
+    setErrors({ password: "", confirmPassword: "" });
     const isValid = PasswordResetSchema.safeParse(data);
     if (!isValid.success) {
       isValid.error.issues.forEach((issue) => {
@@ -83,21 +90,26 @@ function ResetPassword() {
     toast("Submitting...");
 
     resetPassword(userId, data.password, token)
-    .then((res) => {
-      if(res.ok) toast.success(res.message);
-      else toast.error(res.message);
-    });
-
-    setLoading(false);
+      .then((res) => {
+        if (res.ok) {
+          toast.success(res.message);
+          redirect("/signin");
+        } else toast.error(res.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
-    <div className="font-jetbrains-mono flex flex-col items-center gap-8 p-12">
-      <h1 className="text-4xl font-semibold">Reset your Password</h1>
-      <div className="relative flex flex-col items-center gap-2">
+    <div className="flex h-full min-h-[80vh] flex-col items-center justify-center gap-8">
+      <h1 className="text-center text-5xl font-semibold">
+        Reset your Password
+      </h1>
+      <div className="relative flex w-full flex-col items-center gap-2 sm:w-1/3 2xl:w-1/4">
         <div className="absolute top-1/2 -right-10 -translate-y-1/2">
-          <Tooltip message="Password must be atleast 8 characters long and must contain atleast 1 lowercase letter, 1 uppercase letter, 1 number and 1 special character">
-            <p className="rounded-full bg-gray-300/40 px-2 py-1 text-xs">i</p>
+          <Tooltip message="Password must be at least 8 characters long and must contain at least 1 lowercase letter, 1 uppercase letter, 1 number and 1 special character">
+            <Info className="flex h-6 w-6 cursor-help items-center justify-center rounded-full text-xs text-white/60 transition-colors hover:text-red-400" />
           </Tooltip>
         </div>
         <input
@@ -106,30 +118,31 @@ function ResetPassword() {
           placeholder="Password"
           value={data.password}
           onChange={(e) => handleChange("password", e.target.value)}
-          className="rounded-sm border px-2 py-1"
+          className="w-full border border-white/20 bg-transparent px-6 py-4 font-light text-white transition-colors outline-none placeholder:text-white/40 focus:border-red-400"
         />
         {errors.password && (
           <p className="text-sm text-red-500">{errors.password}</p>
         )}
       </div>
-      <div className="flex flex-col items-center gap-2">
+      <div className="flex w-full flex-col items-center gap-2">
         <input
           type="password"
           name="confirmPassword"
           placeholder="Confirm Password"
           value={data.confirmPassword}
           onChange={(e) => handleChange("confirmPassword", e.target.value)}
-          className="rounded-sm border px-2 py-1"
+          className="w-full border border-white/20 bg-transparent px-6 py-4 font-light text-white transition-colors outline-none placeholder:text-white/40 focus:border-red-400 sm:w-1/3 2xl:w-1/4"
         />
         {errors.confirmPassword && (
           <p className="text-sm text-red-500">{errors.confirmPassword}</p>
         )}
       </div>
       <button
-        className="rounded-xs bg-white px-2 py-1 text-black transition-colors duration-300 hover:bg-white/90 active:bg-white/60"
-        onClick={() => handleSubmit()} disabled={loading}
+        className="border border-red-400 px-8 py-3 tracking-wide text-white transition-colors hover:bg-red-400/30 disabled:cursor-not-allowed disabled:opacity-50"
+        onClick={() => handleSubmit()}
+        disabled={loading}
       >
-        Update Password
+        Submit
       </button>
     </div>
   );
