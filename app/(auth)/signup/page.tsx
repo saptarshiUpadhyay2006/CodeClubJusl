@@ -3,7 +3,6 @@ import { signup } from "@/services/AuthService";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import ReactDOM from "react-dom";
 import { CONST } from "@/utils/constants";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
@@ -247,12 +246,6 @@ function Page() {
       </div>
     </div>
   );
-}
-
-export function PreloadResources() {
-  ReactDOM.preconnect("https://challenges.cloudflare.com");
-
-  return "...";
 }
 
 export default Page;

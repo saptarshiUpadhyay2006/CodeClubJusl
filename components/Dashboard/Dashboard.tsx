@@ -1,15 +1,13 @@
 "use client";
 
 import { signOut } from "next-auth/react";
-import React, { useRef, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { UserRole } from "@prisma/client";
 import { Event } from "@/types/events";
-import { SERVER_URL } from "@/utils/constants";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
-import { editUserDetails } from "@/services/UserService";
 import EditProfileDialog from "./EditProfileDialog";
 
 type DashboardTeam = {
