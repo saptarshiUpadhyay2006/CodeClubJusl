@@ -88,10 +88,6 @@ const verifyTurnstileToken = async (token: string) => {
     });
     const data = await response.json() as TurnstileResponse;
     if(!data.success) console.error("Error while validatin turnstile token: ", data["error-codes"]);
-    if(data.hostname !== SERVER_URL){
-      console.error("Invalid turnstile hostname: ", data.hostname);
-      return false;
-    }
     return data.success;
   }catch(err){
     console.error("Error while validating turnstile token: ", err);
