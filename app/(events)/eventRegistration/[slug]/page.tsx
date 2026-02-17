@@ -21,7 +21,7 @@ export default async function Page({
   if (!event) return <NotFound />;
 
   const user = await checkAuthentication(`/eventRegistration/${slug}`);
-  const registrationStatus = await getRegistrationStatus(user.id, event);
+  const registrationStatus = await getRegistrationStatus(user.id, event.slug);
 
   if (registrationStatus.status === RegistrationStatus.REGISTERED)
     return (
@@ -31,7 +31,7 @@ export default async function Page({
     return (
       <Pending
         teamData={registrationStatus.pendingTeamData}
-        eventName={event.name}
+        eventName={event.name} registrationsOpen={event.registrationsOpen}
         userId={user.id}
       />
     );
