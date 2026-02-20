@@ -1,4 +1,4 @@
-import eventData from "@/eventData.json";
+import eventData from "@/data/eventData.json";
 import { redirect } from "next/navigation";
 import {
   Calendar,

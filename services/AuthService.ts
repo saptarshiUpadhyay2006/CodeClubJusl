@@ -5,7 +5,7 @@ import bcrypt from "bcryptjs";
 import { prisma } from "@/prisma/client";
 import { auth, signIn, unstable_update } from "@/auth";
 import { redirect } from "next/navigation";
-import { CONST, SERVER_URL } from "@/utils/constants";
+import { CONST } from "@/utils/constants";
 import { AuthError } from "next-auth";
 import { UserRole } from "@prisma/client";
 import { withAuth } from "@/utils/withAuth";
@@ -87,7 +87,7 @@ const verifyTurnstileToken = async (token: string) => {
       })
     });
     const data = await response.json() as TurnstileResponse;
-    if(!data.success) console.error("Error while validatin turnstile token: ", data["error-codes"]);
+    if(!data.success) console.error("Error while validating turnstile token: ", data["error-codes"]);
     return data.success;
   }catch(err){
     console.error("Error while validating turnstile token: ", err);
