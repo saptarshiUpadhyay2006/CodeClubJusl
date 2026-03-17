@@ -32,7 +32,7 @@ export default async function Page({
             </h1>
 
             <div className="grid sm:grid-cols-2 place-items-center gap-8 py-8">
-              <Image src={`/images/posters/${eventDetails.eventPoster}`} width={200} height={200} className="h-full w-auto" alt={eventDetails.name} />
+              <Image src={`/images/posters/${eventDetails.eventPoster}`} width={400} height={400} className="h-full w-auto" alt={eventDetails.name} />
               <div className="flex flex-col items-center gap-10">
                 <p className="mx-auto max-w-4xl text-lg leading-relaxed font-light text-white/80 md:text-xl">
                   {eventDetails.eventShortDescription}
@@ -114,6 +114,23 @@ export default async function Page({
               </h2>
               <div className="space-y-5">
                 {eventDetails.eventRules.map((rule, index) => (
+                  <div key={index} className="flex items-start gap-4">
+                    <div className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-red-400"></div>
+                    <p className="text-base leading-relaxed font-light text-white/70">
+                      {rule}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Event Format */}
+            <div className="border-l-2 border-red-400 pl-8">
+              <h2 className="mb-8 text-3xl font-bold tracking-tight text-white">
+                Event Format
+              </h2>
+              <div className="space-y-5">
+                {eventDetails.eventFormat.map((rule, index) => (
                   <div key={index} className="flex items-start gap-4">
                     <div className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-red-400"></div>
                     <p className="text-base leading-relaxed font-light text-white/70">

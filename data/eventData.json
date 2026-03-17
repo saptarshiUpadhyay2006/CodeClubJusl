@@ -3,218 +3,171 @@
     "slug": "ptb",
     "name": "Pass the Baton",
     "eventDate": {
-      "prelims": [
-        "14th April 2025"
-      ],
-      "finals": "19th April 2025"
+      "prelims": ["To Be Announced"],
+      "finals": "To Be Announced"
     },
-    "eventHashtags": [
-      "hackathon",
-      "machinelearning",
-      "ai",
-      "openaimer"
-    ],
+    "eventHashtags": ["competitiveprogramming", "dsa/cp", "relay"],
     "registrationOpen": true,
     "eventCoordinators": [
-      "John Doe [9898989898]",
-      "John Doe [9898989898]",
-      "John Doe [9898989898]"
+      "Ankit Kundu (6295529281)",
+      "Neelim Goswami (6290329309)",
+      "Sayan Dutta (8584922334)"
     ],
-    "prize": [
-      "1st : 5000    ",
-      "2nd : 2500     ",
-      "3rd : 1500 "
-    ],
+    "prize": ["1st : 5000", "2nd : 2500", "3rd : 1500"],
     "minMembers": 3,
     "maxMembers": 3,
     "eventPoster": "ptb.webp",
-    "eventShortDescription": "Embark on the ML adventure in 'OpenAImer'! Unleash your algorithms, analyse data, and spark innovation!",
+    "eventShortDescription": "A relay-style competitive programming event",
     "eventDescription": [
       "A team-based competitive programming contest, with a unique twist where in each team member gets a shot at solving the same problem, relying only on clues left behind by the previous solver. It's a refreshing take on the traditional programming competition, challenging your algorithmic prowess, quick thinking and teamwork capabilities."
     ],
     "eventRules": [
-      "This is a team event. Each team comprises exactly 3 members. Inter-college teams are also allowed.",
-      "The prelims will be conducted in online mode on Codeforces and have 6-8 problems.",
-      "The top 15-20 teams from the preliminary round will qualify to the finals.",
-      "The final round  will be conducted onsite. During the final round, team members will not be able to communicate with each other and can only access the code written by the previous teammate.",
-      "The decisions of the Code Club officials will be final and binding."
+      "Team Size: Exactly 3 members (Inter-college teams allowed).",
+      "Relay Restrictions (Finals): During the final round, team members will not be able to communicate with each other. A member can only access the code written by the previous member who was working on that specific part."
     ],
-    "eventFormat": "The event will consist of an online preliminary round and an on-site final round. The prelims will be a 2 hour ICPC-style contest. The final round will be conducted on-site. For the final round, the entire problem set will be divided into three parts (A, B, C) and each team member will get exactly 30 minutes to work on each part, alternately. For example, in the first 30 minutes the three team members will be solving parts A, B and C respectively, in the next 30 minutes they will be solving parts C, A, B respectively, and in the last 30 minutes parts B, C, A respectively. Each part will consist of exactly 2 problems. Additionally, a bonus part consisting of 1-2 problems will be available in the last 30 minutes. Thus, three parts of 30 minutes each and one bonus part of 30 minutes for a total of 2 hours."
+    "eventFormat": [
+      "Event Structure: A relay-style competitive programming event.",
+      "Round 1 (Online Prelims): A standard 2-hour ICPC-style contest held on Codeforces featuring 6-8 problems. Top 15-20 teams qualify.",
+      "Round 2 (Onsite Finals): A 2-hour relay contest. The problem set is divided into three parts (A, B, C) of 2 problems each, plus a Bonus part. Each team member works on one part for exactly 30 minutes, then they rotate (e.g., Member 1 does A, then C, then B). The bonus part unlocks in the final 30 minutes."
+    ]
   },
   {
     "slug": "h42",
     "name": "H42",
     "eventDate": {
-      "prelims": [
-        "15th April"
-      ],
-      "finals": "20th April"
+      "prelims": ["To Be Announced"],
+      "finals": "To Be Announced"
     },
-    "eventHashtags": [
-      "hackathon",
-      "machinelearning",
-      "ai",
-      "openaimer"
-    ],
+    "eventHashtags": ["competitiveprogramming", "dsa/cp", "contest"],
     "registrationOpen": true,
     "eventCoordinators": [
-      "John Doe [9898989898]",
-      "John Doe [9898989898]",
-      "John Doe [9898989898]"
+      "Irfan Habeeb Gazi (9007130066)",
+      "Daniyal Anis (9748850137)",
+      "Sayantan Biswas (9062334673)"
     ],
-    "prize": [
-      "1st : TBD     ",
-      "2nd : TBD     ",
-      "3rd : TBD "
-    ],
+    "prize": ["1st : TBD", "2nd : TBD", "3rd : TBD"],
     "minMembers": 1,
     "maxMembers": 3,
     "eventPoster": "h42.webp",
-    "eventShortDescription": "Embark on the ML adventure in 'OpenAImer'! Unleash your algorithms, analyse data, and spark innovation!",
+    "eventShortDescription": "H42 is a ICPC-style contest for teams of three, focused on solving algorithmic problems under time pressure.",
     "eventDescription": [
-      "Do you enjoy coding but fail to realize its significance in the real world? Do you get bored with the mundane problems you get to solve? Do you yearn to do more? Do you want to rack your head and find the best suited algorithm? Do you have the patience to do so? H42, brought to you by Srijan, Jadavpur University, offers a splendid chance to prove your coding skills and end the boredom. Come, be a part of this coding event and code to glory."
+      "Online Prelims: Open to all, this qualifying round determines which teams advance to the finals.",
+      "Offline Finals: Top teams compete on-site, tackling more complex problems that test problem-solving, efficiency, and teamwork.",
+      "H42 challenges speed, logic, and coding skills, making it a must-attend for CP enthusiasts."
     ],
     "eventRules": [
-      "This is a team event. Each team comprises 1-3 members. Inter-college teams are also allowed.",
-      "There will be 2 rounds. Both the rounds will have 4 programming questions.",
-      "Only one prelims will be conducted which will be in Online mode.",
-      "The timing of the event will be notified later.",
-      "Top 20 teams from the preliminary round will make it to the finals.",
+      "Team Size: 1 to 3 members per team. Inter-college teams are allowed.",
+      "Teams are judged based on the number of questions solved, with standard ICPC rules applying for penalty calculation to break ties.",
       "The decisions of Code Club Officials are final and binding."
+    ],
+    "eventFormat": [
+      "Event Structure: An ICPC-style competitive programming contest focused on solving algorithmic problems under time pressure. The event consists of two rounds.",
+      "Round 1 (Online Prelims): An online qualifying round open to all. Participants will face 6-10 programming problems to be solved in 2 to 3 hours. Top 20 teams from this round advance to the finals.",
+      "Round 2 (Offline Finals): The top 20 teams will compete on-site, tackling 6-10 more complex problems in 2 to 3 hours that test problem-solving, algorithmic efficiency, and teamwork."
     ]
   },
   {
     "slug": "sherlocked",
     "name": "Sherlocked",
     "eventDate": {
-      "prelims": [
-        "16th April 2025 (Online)"
-      ],
-      "finals": [
-        "19th April 2025 (On campus)"
-      ]
+      "prelims": ["To Be Announced"],
+      "finals": ["To Be Announced"]
     },
-    "eventHashtags": [
-      "murder-mystery",
-      "cryptography",
-      "data-analysis"
-    ],
+    "eventHashtags": ["murder-mystery", "cryptography", "data-analysis"],
     "registrationOpen": true,
     "eventCoordinators": [
-      "John Doe [9898989898]",
-      "John Doe [9898989898]",
-      "John Doe [9898989898]"
+      "Subhayan Roy Chowdhury (6289955350)",
+      "Kaji Manirul Islam (7865060015)",
+      "Swarnendu Banerjee (9564027954)"
     ],
-    "prize": [
-      "1st : TBD ",
-      "2nd : TBD ",
-      "3rd : TBD"
-    ],
-    "minMembers": 2,
+    "prize": ["1st : TBD ", "2nd : TBD ", "3rd : TBD"],
+    "minMembers": 3,
     "maxMembers": 3,
     "eventPoster": "sherlocked.webp",
-    "eventShortDescription": "Embark on the ML adventure in 'OpenAImer'! Unleash your algorithms, analyse data, and spark innovation!",
+    "eventShortDescription": "Sherlocked - a battle of logic, precision, and deduction.",
     "eventDescription": [
-      "Welcome to Sherlocked, a thrilling battle of intellect where participants must unravel encrypted secrets, decode perplexing ciphers, and expose concealed truths to solve a gripping murder mystery across 2 intense rounds. This challenge will push your analytical thinking, logical reasoning, and technical expertise to their limits in a world full of digital deception."
+      "Sherlocked 2026 is a two-round sci-fi mystery solving CTF hosted by CodeClub JUSL combining cryptography, computer science fundamentals and investigative reasoning within an immersive narrative framework. Participants step into the role of an intern at NeuroDyne, a cutting-edge tech corporation experimenting with time manipulation. What begins as a routine assignment escalates into a layered investigation involving corporate conspiracy, murder, and a race against causality itself.",
+      "This is not just a coding contest - it is a battle of logic, precision, and deduction."
     ],
     "eventRules": [
-      "Hosted on HackerRank.",
-      "Includes puzzles including but not limited to cryptography and data analysis.",
-      "Time limit: 1 hour.",
-      "Each question carries points, with partial marking for partially solved answers.",
-      "Accuracy matters—incorrect submissions will result in penalties.",
-      "Hints to be provided at certain time intervals.",
-      "Specific rules related to individual questions will be mentioned in the contest platform.",
-      "Date: (Date to be announced) :  Online Mode.",
-      "About 20 teams qualify for the finals."
+      "Team Size: Exactly 3 members.",
+      "Eligibility: Open to both undergraduate and postgraduate students.",
+      "Scoring & Penalties: No partial marks; each question carries different weightage.",
+      "Tie-breaker across both rounds: Total time taken.",
+      "Round 1 features a time-based penalty system (dynamic ranking).",
+      "Round 2 features penalties for incorrect submissions.",
+      "Integrity: Participants must adhere strictly to contest integrity guidelines. Any form of malpractice results in immediate disqualification."
+    ],
+    "eventFormat": [
+      "Event Structure: A two-stage, narrative-driven Capture The Flag (CTF) competition blending cybersecurity, cryptographic, and CS-based technical challenges with an investigative storyline.",
+      "Round 1: The Paradox Protocol (Online): A 2-hour online round held on a third-party platform. Teams act as interns at a futuristic corporation and solve internal encrypted challenges. The top 30 teams advance to the finals.",
+      "Round 2: Twice Upon a Time (Offline): A 2-hour offline round held at the SMCC, Jadavpur Salt Lake Campus. Teams must reassess, reinterpret, and reconstruct sequences of events to solve the mystery."
     ]
   },
   {
     "slug": "hackforge",
     "name": "HackForge",
     "eventDate": {
-      "prelims": [
-        "02 Mar 25, 08:00 PM IST - 25 Mar 25, 11:59 PM IST"
-      ],
-      "finals": "30 Mar 25, 10:00 AM IST -  30 Mar 25, 10:00 PM IST"
+      "prelims": ["To Be Announced"],
+      "finals": "To Be Announced"
     },
-    "eventHashtags": [
-      "hackathon",
-      "machinelearning",
-      "ai",
-      "openaimer"
-    ],
+    "eventHashtags": ["hackathon", "development", "coding", "innovation"],
     "registrationOpen": true,
     "eventCoordinators": [
-      "John Doe [9898989898]",
-      "John Doe [9898989898]",
-      "John Doe [9898989898]"
+      "Aritra Mondal (7365911452)",
+      "Dipan Mondal (8250821406)",
+      "Vivek Halder (9875495117)"
     ],
-    "prize": [
-      "1st : 4000    ",
-      "2nd : 2500    ",
-      "3rd : 2000"
-    ],
+    "prize": ["1st : 4000", "2nd : 2500", "3rd : 2000"],
     "minMembers": 3,
     "maxMembers": 4,
     "eventPoster": "hackforge.webp",
-    "eventShortDescription": "Embark on the ML adventure in 'OpenAImer'! Unleash your algorithms, analyse data, and spark innovation!",
+    "eventShortDescription": "Welcome to HackForge, an electrifying offline hackathon!",
     "eventDescription": [
-      "Welcome to HackForge, an electrifying offline hackathon organized by CodeClub JUSL as part of Srijan'25, the annual techno-management fest of Jadavpur University. HackForge is more than just a competition; it’s a place where creativity meets technology, and where participants can push their boundaries, collaborate, and bring groundbreaking ideas to life.",
+      "Welcome to HackForge, an electrifying offline hackathon organized by CodeClub JUSL as part of Srijan'26, the annual techno-management fest of Jadavpur University. HackForge is more than just a competition; it's a place where creativity meets technology, and where participants can push their boundaries, collaborate, and bring groundbreaking ideas to life.",
       "Our goal is to ignite a passion for programming and problem-solving among students from diverse academic backgrounds. At HackForge, we believe in fostering an ecosystem where innovation, teamwork, and technological excellence come together. Participants will have the opportunity to network with like-minded peers, showcase their problem-solving abilities, and develop real-world solutions that could make a tangible impact.",
-      "Whether you're an experienced coder or an aspiring tech enthusiast, HackForge offers you the perfect stage to test your skills, learn new technologies, and challenge yourself. Join us for this exciting journey, where innovation has no limits, and let’s work together to shape the future of technology!"
+      "Whether you're an experienced coder or an aspiring tech enthusiast, HackForge offers you the perfect stage to test your skills, learn new technologies, and challenge yourself. Join us for this exciting journey, where innovation has no limits, and let's work together to shape the future of technology!"
     ],
     "eventRules": [
-      "The Coding + Pitching Round will begin precisely at 10:00 AM. All team members must be present onsite at the scheduled time. Failure to do so will result in disqualification.",
-      "Participants are allowed to use any technology stack of their choice to develop their solution.",
-      "All GitHub commits must be made only after the start of the onsite round. Any prior commits will lead to immediate disqualification.",
-      "All submissions will be subjected to a plagiarism check. Any instance of code plagiarism or idea replication will lead to disqualification from the competition.",
-      "Code will be evaluated at multiple timestamps, so teams must regularly push their progress to the designated repository.",
-      "Food and beverages will be provided to all team members participating in the onsite round."
+      "Team Size: 3 to 4 members.",
+      "Punctuality: The onsite Coding + Pitching round begins precisely at 10:00 AM. All team members must be present at the scheduled time; failure to do so results in disqualification.",
+      "Code Commits: All GitHub commits must be made only after the start of the onsite round. Any prior commits will lead to immediate disqualification. Teams must regularly push their progress to the designated repository.",
+      "Integrity: All submissions are subject to a plagiarism check. Any instance of code plagiarism or idea replication leads to disqualification."
+    ],
+    "eventFormat": [
+      "Event Structure: A hackathon featuring an Online Prelims round and an Onsite Finals (Coding + Pitching Round).",
+      "Development: Participants are allowed to use any technology stack of their choice to develop their solution. Code will be evaluated at multiple timestamps during the event."
     ]
   },
   {
     "slug": "epochalypse",
     "name": "Epochalypse",
     "eventDate": {
-      "prelims": [
-        "02 Mar 25, 08:00 PM IST - 25 Mar 25, 11:59 PM IST"
-      ],
-      "finals": "30 Mar 25, 10:00 AM IST -  30 Mar 25, 10:00 PM IST"
+      "prelims": ["To Be Announced"],
+      "finals": "To Be Announced"
     },
-    "eventHashtags": [
-      "hackathon",
-      "machinelearning",
-      "ai",
-      "openaimer"
-    ],
+    "eventHashtags": ["data-science", "machine-learning", "ai"],
     "registrationOpen": true,
     "eventCoordinators": [
-      "John Doe [9898989898]",
-      "John Doe [9898989898]",
-      "John Doe [9898989898]"
+      "Atmik Goswami (8910425255)",
+      "Asmit Deb (6290050401)"
     ],
-    "prize": [
-      "1st : 4000    ",
-      "2nd : 2500    ",
-      "3rd : 2000"
-    ],
+    "prize": ["1st : TBD", "2nd : TBD", "3rd : TBD"],
     "minMembers": 3,
     "maxMembers": 4,
-    "eventPoster": "hackforge.webp",
+    "eventPoster": "epoch.webp",
     "eventShortDescription": "Embark on the ML adventure in 'OpenAImer'! Unleash your algorithms, analyse data, and spark innovation!",
     "eventDescription": [
-      "Welcome to HackForge, an electrifying offline hackathon organized by CodeClub JUSL as part of Srijan'25, the annual techno-management fest of Jadavpur University. HackForge is more than just a competition; it’s a place where creativity meets technology, and where participants can push their boundaries, collaborate, and bring groundbreaking ideas to life.",
-      "Our goal is to ignite a passion for programming and problem-solving among students from diverse academic backgrounds. At HackForge, we believe in fostering an ecosystem where innovation, teamwork, and technological excellence come together. Participants will have the opportunity to network with like-minded peers, showcase their problem-solving abilities, and develop real-world solutions that could make a tangible impact.",
-      "Whether you're an experienced coder or an aspiring tech enthusiast, HackForge offers you the perfect stage to test your skills, learn new technologies, and challenge yourself. Join us for this exciting journey, where innovation has no limits, and let’s work together to shape the future of technology!"
+      "Welcome to Epochalypse, where static numbers evolve into high-stakes battlegrounds. Your mission is to harness the full power of data – decoding the past through immersive visualization and conquering the future via intelligent simulations. This challenge tests your ability to engineer resilient systems that don't just predict the chaos, but master it."
     ],
     "eventRules": [
-      "The Coding + Pitching Round will begin precisely at 10:00 AM. All team members must be present onsite at the scheduled time. Failure to do so will result in disqualification.",
-      "Participants are allowed to use any technology stack of their choice to develop their solution.",
-      "All GitHub commits must be made only after the start of the onsite round. Any prior commits will lead to immediate disqualification.",
-      "All submissions will be subjected to a plagiarism check. Any instance of code plagiarism or idea replication will lead to disqualification from the competition.",
-      "Code will be evaluated at multiple timestamps, so teams must regularly push their progress to the designated repository.",
-      "Food and beverages will be provided to all team members participating in the onsite round."
+      "Team Size: Exactly 3 members.",
+      "Teams must solve and submit solutions for both tracks to be eligible for evaluation.",
+      "Final results and winners are declared after the offline presentation round."
+    ],
+    "eventFormat": [
+      "Round 1 (Online): A problem statement consisting of two distinct tracks will be released to all teams. Participants must solve and submit their solutions for both tracks (including code, results, and a detailed report). Teams will have approximately 10 days to work on the problem statement before the deadline.",
+      "Round 2 (Offline): All submissions from Round 1 will be evaluated, and the top 15 shortlisted teams will be invited to present their solutions before a panel of judges on-site at the Jadavpur University Salt Lake Campus."
     ]
   }
 ]
