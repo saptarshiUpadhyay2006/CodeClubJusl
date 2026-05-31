@@ -277,59 +277,7 @@ function Hero() {
       {/* Centered spacer to push Hero content below the centered logo */}
       <div className="h-[36vh] w-full shrink-0 pointer-events-none sm:h-[40vh]" />
 
-      {/* Hero Content (reveals staggered beneath the logo) */}
-      <motion.div
-        variants={stagger}
-        initial="hidden"
-        animate={revealAnimate}
-        className="relative z-10 flex w-full max-w-5xl flex-col items-center gap-y-3 px-4 sm:gap-y-4 md:gap-y-5"
-      >
-        {/* Club Name */}
-        <motion.h1
-          variants={fadeUp}
-          className="text-center text-4xl font-semibold text-white xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
-        >
-          <span className="text-white">Code</span>
-          <span className="text-[#ed1b58]">Club</span> JUSL
-        </motion.h1>
 
-        {/* Timeline */}
-        <motion.div
-          variants={fadeUp}
-          className="flex h-fit w-11/12 max-w-2xl items-center justify-between text-red-400"
-        >
-          <p className="p-2 text-xs sm:text-sm font-medium">[2018]</p>
-          <div className="h-px w-full bg-gray-300/20" />
-          <p className="p-2 text-xs sm:text-sm font-medium">[NOW]</p>
-        </motion.div>
-
-        {/* Description */}
-        <motion.p
-          variants={fadeUp}
-          className="w-11/12 max-w-2xl text-center text-xs leading-relaxed text-white/70 sm:text-base lg:text-lg"
-        >
-          {/*CodeClub JUSL is the official coding club of Jadavpur University that
-          operates from the Salt Lake Campus. It offers a collaborative platform
-          for individuals passionate about tech and programming to learn and
-          share their knowledge.*/}
-        </motion.p>
-
-        {/* CTA Buttons */}
-        <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-3 pt-2">
-          <Link
-            href="/events"
-            className="border border-red-400 px-6 py-2.5 text-xs sm:text-sm uppercase tracking-wider text-red-400 transition-all duration-300 hover:bg-red-400 hover:text-black"
-          >
-
-          </Link>
-          <Link
-            href="/signin"
-            className="border border-white/20 px-6 py-2.5 text-xs sm:text-sm uppercase tracking-wider text-white/70 transition-all duration-300 hover:border-white hover:text-white"
-          >
-
-          </Link>
-        </motion.div>
-      </motion.div>
 
       {/* Scroll indicator */}
       <motion.div
