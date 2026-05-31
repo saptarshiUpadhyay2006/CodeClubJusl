@@ -17,9 +17,6 @@ export default function AboutUniversity() {
           {/* Left — Text */}
           <AnimatedSection direction="left" delay={0.1}>
             <div className="flex flex-col gap-6">
-              <h3 className="text-lg font-semibold uppercase tracking-wider text-red-400">
-                Salt Lake Campus
-              </h3>
               <p className="text-sm leading-relaxed text-white/70 sm:text-base lg:text-lg lg:leading-8">
                 Jadavpur University, established in 1955, is one of the premier
                 institutions of higher learning in India. The Salt Lake Campus,
@@ -57,7 +54,7 @@ export default function AboutUniversity() {
           <AnimatedSection direction="right" delay={0.2}>
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-white/10">
               <Image
-                src="/images/posters/hackforge.webp"
+                src="/images/jusl.avif"
                 alt="Jadavpur University Salt Lake Campus"
                 fill
                 className="object-cover"
