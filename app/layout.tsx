@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
+import { Geist, Geist_Mono, JetBrains_Mono, Syne, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "react-hot-toast";
@@ -20,6 +20,17 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+const syne = Syne({
+  variable: "--font-syne",
+  subsets: ["latin"],
+});
+
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas-neue",
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export const metadata: Metadata = {
   title: "CodeClub JUSL",
   description: "The official website for CodeClub JUSL",
@@ -36,7 +47,7 @@ export default function RootLayout({
             <link rel="preconnect" href="https://challenges.cloudflare.com" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${jetbrainsMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${jetbrainsMono.variable} ${syne.variable} ${bebasNeue.variable} antialiased`}
       >
         <Navbar />
         <ConfirmationDialogContextProvider>
