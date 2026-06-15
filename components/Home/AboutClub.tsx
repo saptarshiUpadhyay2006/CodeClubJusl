@@ -7,9 +7,9 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function AboutClub() {
   return (
-    <section className="w-full bg-black py-20 lg:py-28">
+    <section className="w-full bg-black py-14 sm:py-20 lg:py-28">
       <div className="mx-auto w-11/12 max-w-7xl">
-        <SectionHeading className="mb-12 lg:mb-16">
+        <SectionHeading className="mb-8 sm:mb-12 lg:mb-16">
           About <span className="text-[#ed1b58]">Code</span>Club
         </SectionHeading>
 

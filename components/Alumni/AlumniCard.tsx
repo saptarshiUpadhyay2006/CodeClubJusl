@@ -19,7 +19,7 @@ export default function AlumniCard({ alumni, index, onClick }: AlumniCardProps) 
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.05 }}
       onClick={onClick}
-      className="group flex flex-col items-center gap-4 rounded-lg border border-white/10 p-6 text-center transition-all duration-300 hover:border-red-400/30 hover:shadow-lg hover:shadow-red-400/5"
+      className="group flex flex-col items-center gap-3 sm:gap-4 rounded-lg border border-white/10 p-4 sm:p-6 text-center transition-all duration-300 hover:border-red-400/30 hover:shadow-lg hover:shadow-red-400/5"
     >
       {/* Photo */}
       <div className="relative h-24 w-24 overflow-hidden rounded-full border-2 border-white/10 transition-all duration-300 group-hover:border-red-400/40 sm:h-28 sm:w-28">

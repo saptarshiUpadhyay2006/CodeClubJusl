@@ -16,7 +16,7 @@ export default function PartnerSection({ title, partners }: PartnerSectionProps)
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <div ref={ref} className="w-full py-16 sm:py-24">
+    <div ref={ref} className="w-full py-10 sm:py-16 md:py-24">
       <SectionHeading className="mb-12 sm:mb-16">{title}</SectionHeading>
 
       <motion.div

@@ -45,7 +45,7 @@ export default function EventCard({ event, index = 0 }: EventCardProps) {
       </div>
 
       {/* Text Container */}
-      <div className="p-6 sm:p-8 flex flex-col flex-grow">
+      <div className="p-4 sm:p-6 lg:p-8 flex flex-col flex-grow">
         {/* Title */}
         <h3 className="text-xl font-bold text-white transition-colors duration-200 group-hover:text-red-400 sm:text-2xl">
           {event.title}

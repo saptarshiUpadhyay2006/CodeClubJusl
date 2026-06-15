@@ -22,12 +22,12 @@ export default function TeamsPage() {
   return (
     <div className="min-h-screen bg-black">
       {/* Header */}
-      <div ref={headerRef} className="pb-8 pt-12 lg:pt-16">
+      <div ref={headerRef} className="pb-6 pt-10 sm:pb-8 sm:pt-12 lg:pt-16">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center text-5xl font-semibold uppercase tracking-tight text-white sm:text-6xl lg:text-7xl"
+          className="text-center text-4xl font-semibold uppercase tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
         >
           Our Team
         </motion.h1>
@@ -71,7 +71,7 @@ export default function TeamsPage() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="grid gap-6 pb-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+            className="grid gap-4 sm:gap-6 pb-12 sm:pb-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
           >
             {filteredMembers.map((member, i) => (
               <TeamMemberCard

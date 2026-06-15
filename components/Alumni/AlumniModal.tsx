@@ -44,7 +44,7 @@ export default function AlumniModal({ alumni, onClose }: AlumniModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.3 }}
-            className="relative max-h-[85vh] w-full max-w-lg overflow-y-auto border border-white/10 bg-[#0a0a0a] p-8"
+            className="relative max-h-[85vh] w-full max-w-lg overflow-y-auto border border-white/10 bg-[#0a0a0a] p-5 sm:p-8"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}

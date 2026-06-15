@@ -47,9 +47,9 @@ export default function GalleryPreview() {
   const previewItems = galleryItems.slice(0, 8);
 
   return (
-    <section ref={sectionRef} className="w-full bg-black py-20 lg:py-28">
+    <section ref={sectionRef} className="w-full bg-black py-14 sm:py-20 lg:py-28">
       <div className="mx-auto w-11/12 max-w-7xl">
-        <SectionHeading className="mb-12 lg:mb-16">Gallery</SectionHeading>
+        <SectionHeading className="mb-8 sm:mb-12 lg:mb-16">Gallery</SectionHeading>
       </div>
 
       <motion.div
@@ -64,7 +64,7 @@ export default function GalleryPreview() {
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseLeave}
-          className={`flex gap-4 overflow-x-auto px-4 py-4 scrollbar-hide sm:px-8 lg:px-16 ${
+          className={`flex gap-3 sm:gap-4 overflow-x-auto px-3 py-4 scrollbar-hide sm:px-8 lg:px-16 ${
             isDragging ? "cursor-grabbing" : "cursor-grab"
           }`}
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
@@ -83,8 +83,8 @@ export default function GalleryPreview() {
                 transition={{ duration: 0.5, delay: 0.1 * i }}
                 className={`relative flex-shrink-0 overflow-hidden rounded-lg border border-white/10 ${
                   isCenter
-                    ? "h-64 w-80 sm:h-80 sm:w-[28rem]"
-                    : "h-52 w-64 sm:h-64 sm:w-80"
+                    ? "h-52 w-64 sm:h-64 sm:w-80 lg:h-80 lg:w-[28rem]"
+                    : "h-40 w-52 sm:h-52 sm:w-64 lg:h-64 lg:w-80"
                 }`}
               >
                 <Image

@@ -63,12 +63,12 @@ export default function EventsPage() {
   return (
     <div className="min-h-screen bg-black">
       {/* ── Page Header ─────────────────────────────────────────────────────── */}
-      <div ref={headerRef} className="pb-8 pt-12 lg:pt-16">
+      <div ref={headerRef} className="pb-6 pt-10 sm:pb-8 sm:pt-12 lg:pt-16">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center text-5xl font-semibold uppercase tracking-tight text-white sm:text-6xl lg:text-7xl"
+          className="text-center text-4xl font-semibold uppercase tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
         >
           Events
         </motion.h1>
@@ -80,14 +80,14 @@ export default function EventsPage() {
         />
       </div>
 
-      <div className="mx-auto w-11/12 max-w-7xl pb-24">
+      <div className="mx-auto w-11/12 max-w-7xl pb-16 sm:pb-24">
         {/* ── Tabs ───────────────────────────────────────────────────────────── */}
         <div className="mb-12 flex justify-center gap-1 border-b border-white/10">
           {tabs.map((tab) => (
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`relative px-6 py-3 text-sm uppercase tracking-wider transition-colors duration-200 ${
+              className={`relative px-4 py-2.5 text-xs sm:px-6 sm:py-3 sm:text-sm uppercase tracking-wider transition-colors duration-200 ${
                 activeTab === tab.key
                   ? "text-red-400"
                   : "text-white/40 hover:text-white/70"

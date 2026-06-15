@@ -16,10 +16,10 @@ function Contact() {
 
       <section
         id="contact"
-        className="w-full bg-[#0a0a0a] py-20 lg:py-28"
+        className="w-full bg-[#0a0a0a] py-14 sm:py-20 lg:py-28"
       >
         <div className="mx-auto w-11/12 max-w-7xl">
-          <SectionHeading className="mb-12 lg:mb-16">
+          <SectionHeading className="mb-8 sm:mb-12 lg:mb-16">
             Contact Us
           </SectionHeading>
 
@@ -28,8 +28,7 @@ function Contact() {
             <AnimatedSection direction="left" delay={0.1} className="w-full">
               <iframe
                 style={{ borderRadius: "12px" }}
-                height="400"
-                className="w-full border border-white/10"
+                className="w-full border border-white/10 h-56 sm:h-80 lg:h-[400px]"
                 src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=Jadavpur%20University,%20Salt%20Lake%20Campus+(CodeClub%20JUSL)&t=k&z=16&ie=UTF8&iwloc=B&output=embed"
                 title="CodeClub JUSL Location"
               />

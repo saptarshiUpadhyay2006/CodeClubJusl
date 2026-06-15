@@ -12,7 +12,7 @@ export default function PartnerCard({ partner }: PartnerCardProps) {
   const hasImage = !!partner.image;
 
   return (
-    <div className="group relative aspect-square w-28 sm:w-36 md:w-40 bg-white/[0.02] border border-white/5 rounded-xl p-4 flex items-center justify-center hover:bg-white/[0.04] hover:border-red-400/20 hover:shadow-lg hover:shadow-red-400/5 transition-all duration-300">
+    <div className="group relative aspect-square w-20 sm:w-28 md:w-36 lg:w-40 bg-white/[0.02] border border-white/5 rounded-xl p-3 sm:p-4 flex items-center justify-center hover:bg-white/[0.04] hover:border-red-400/20 hover:shadow-lg hover:shadow-red-400/5 transition-all duration-300">
       {hasImage ? (
         <div className="relative w-full h-full">
           <Image

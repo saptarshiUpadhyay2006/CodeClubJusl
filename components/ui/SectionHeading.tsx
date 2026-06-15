@@ -24,7 +24,7 @@ export default function SectionHeading({
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
       >
-        <Tag className="text-center text-5xl font-semibold uppercase tracking-tight sm:text-6xl lg:text-7xl">
+        <Tag className="text-center text-3xl font-semibold uppercase tracking-tight xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
           {children}
         </Tag>
       </motion.div>

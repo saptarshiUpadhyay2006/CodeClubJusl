@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* ── Custom breakpoint: xs = 400px ───────────────────────────────────────── */
+@theme {
+  --breakpoint-xs: 400px;
+}
+
 :root {
   --background: #ededed;
   --foreground: #000000;
@@ -22,10 +27,16 @@
   }
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: "JetBrains Mono", Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 
 button {

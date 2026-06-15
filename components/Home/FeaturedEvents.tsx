@@ -15,9 +15,9 @@ export default function FeaturedEvents() {
   const preview = flagshipEvents.slice(0, 3);
 
   return (
-    <section ref={sectionRef} id="events" className="w-full bg-black py-20 lg:py-28">
+    <section ref={sectionRef} id="events" className="w-full bg-black py-14 sm:py-20 lg:py-28">
       <div className="mx-auto w-11/12 max-w-7xl">
-        <SectionHeading className="mb-16">Events</SectionHeading>
+        <SectionHeading className="mb-8 sm:mb-12 lg:mb-16">Events</SectionHeading>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
