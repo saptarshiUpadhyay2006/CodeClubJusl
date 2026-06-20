@@ -4,12 +4,9 @@ import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { galleryItems } from "@/data/gallery";
-import LightboxModal from "@/components/Gallery/LightboxModal";
 import Footer from "@/components/Footer";
-import type { GalleryItem } from "@/types";
 
 export default function GalleryPage() {
-  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [visibleCount, setVisibleCount] = useState(12);
   const headerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(headerRef, { once: true });
@@ -18,11 +15,6 @@ export default function GalleryPage() {
 
   const displayItems = filteredItems.slice(0, visibleCount);
   const hasMore = visibleCount < filteredItems.length;
-
-  const openLightbox = (item: GalleryItem) => {
-    const idx = filteredItems.findIndex((i) => i.id === item.id);
-    setLightboxIndex(idx);
-  };
 
   return (
     <div className="min-h-screen bg-black">
@@ -63,10 +55,7 @@ export default function GalleryPage() {
                 transition={{ duration: 0.4, delay: i * 0.03 }}
                 className="mb-4 break-inside-avoid"
               >
-                <button
-                  onClick={() => openLightbox(item)}
-                  className="relative block w-full overflow-hidden rounded-lg border border-white/10"
-                >
+                <div className="relative w-full overflow-hidden rounded-lg border border-white/10">
                   <Image
                     src={item.src}
                     alt={item.alt}
@@ -76,7 +65,7 @@ export default function GalleryPage() {
                     loading="lazy"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
-                </button>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -103,15 +92,7 @@ export default function GalleryPage() {
         )}
       </div>
 
-      {/* Lightbox */}
-      {lightboxIndex !== null && (
-        <LightboxModal
-          items={filteredItems}
-          currentIndex={lightboxIndex}
-          onClose={() => setLightboxIndex(null)}
-          onNavigate={setLightboxIndex}
-        />
-      )}
+
 
       <Footer />
     </div>

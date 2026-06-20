@@ -217,6 +217,7 @@ export const teamMembers: TeamMember[] = [
   },
 
   // PR Team
+  /*
   {
     id: "t17",
     name: "Debarshi Mondal",
@@ -226,7 +227,7 @@ export const teamMembers: TeamMember[] = [
     graduationYear: 2027,
     bio: "I am a passionate software developer with a strong interest in algorithms, problem-solving, and ML and DL . I enjoy building scalable applications using modern technologies and tackling complex technical challenges with efficient solutions. My analytical mindset and attention to detail help me approach problems methodically and effectively. I am naturally curious, enjoy learning new concepts, and continuously seek opportunities to expand my knowledge in software engineering and computational science. I am persistent, adaptable, and motivated by creating impactful and well-designed software systems and machine learning models.",
     socials: { linkedin: "https://www.linkedin.com/in/debarshi-mondal-5567ba2a7/", github: "https://github.com/DebarshiMondal1055" },
-  },
+  },*/
   {
     id: "t18",
     name: "Md mirajul seikh",
@@ -305,7 +306,7 @@ export const teamMembers: TeamMember[] = [
       "Organized Pass The Baton for Srijan 2026."
     ],
     socials: { linkedin: "https://www.linkedin.com/in/neelim-goswami-064919283?utm_source=share_via&utm_content=profile&utm_medium=member_android", github: "https://github.com/goswamineelim" },
-  },
+  },/*
   {
     id: "t22",
     name: "Asmit Deb",
@@ -318,5 +319,5 @@ export const teamMembers: TeamMember[] = [
       "Top 7 in SIH 2024", "top 100 in Adobe India Hackathon 2024"
     ],
     socials: { linkedin: "https://www.linkedin.com/in/asmit-deb-bba35b201/", github: "https://github.com/asmitdeb" },
-  },
+  },*/
 ];

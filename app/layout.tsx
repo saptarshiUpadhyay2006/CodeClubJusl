@@ -34,6 +34,9 @@ const bebasNeue = Bebas_Neue({
 export const metadata: Metadata = {
   title: "CodeClub JUSL",
   description: "The official website for CodeClub JUSL",
+  icons: {
+    icon: "/images/cc-jusl-logo-main-light.png",
+  },
 };
 
 export default function RootLayout({
