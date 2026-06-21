@@ -41,8 +41,8 @@ export interface AlumniMember {
   graduationYear: number;
   company: string;
   role: string;
-  bio: string;
-  achievements: string[];
+  bio?: string;
+  achievements?: string[];
   socials: {
     linkedin?: string;
     github?: string;

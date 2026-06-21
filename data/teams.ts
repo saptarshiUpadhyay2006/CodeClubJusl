@@ -61,13 +61,16 @@ export const teamMembers: TeamMember[] = [
   // Design Team
   {
     id: "t26",
-    name: "Param Ray",
+    name: "Prama Ray",
     position: "Design Lead",
-    photo: "/images/ccjusl-logo.png",
+    photo: "/member_photos/file_000000001ff871f8935fc1b68a9dcd5a - Prama Ray.png",
     team: "design",
     graduationYear: 2027,
-    bio: "I am a passionate designer with a strong foundation in UI/UX and branding. I enjoy creating visually appealing and user-friendly digital experiences.",
-    socials: { linkedin: "https://www.linkedin.com/in/param-ray-9b8b8b294/", github: "https://github.com/ParamRay" },
+    bio: "An IT student and design enthusiast passionate about creating clean, intuitive, and user-centered digital experiences. She blends creativity and technology to build impactful solutions with a strong focus on design and usability.",
+    achievements: [
+      " Currently interning at Wells Fargo",
+    ],
+    socials: { linkedin: "https://www.linkedin.com/in/pramaray", github: "https://github.com/pramaray" },
   },
   {
     id: "t5",

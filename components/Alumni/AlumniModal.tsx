@@ -82,24 +82,28 @@ export default function AlumniModal({ alumni, onClose }: AlumniModalProps) {
               </div>
 
               {/* Bio */}
-              <p className="text-center text-sm leading-relaxed text-white/60">
-                {alumni.bio}
-              </p>
+              {alumni.bio ? (
+                <p className="text-center text-sm leading-relaxed text-white/60">
+                  {alumni.bio}
+                </p>
+              ) : null}
 
               {/* Achievements */}
-              <div className="w-full">
-                <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-white/30">
-                  Achievements
-                </h3>
-                <div className="space-y-2">
-                  {alumni.achievements.map((achievement, i) => (
-                    <div key={i} className="flex items-start gap-3">
-                      <div className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-red-400" />
-                      <p className="text-sm text-white/50">{achievement}</p>
-                    </div>
-                  ))}
+              {alumni.achievements && alumni.achievements.length > 0 ? (
+                <div className="w-full">
+                  <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-white/30">
+                    Achievements
+                  </h3>
+                  <div className="space-y-2">
+                    {alumni.achievements.map((achievement, i) => (
+                      <div key={i} className="flex items-start gap-3">
+                        <div className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-red-400" />
+                        <p className="text-sm text-white/50">{achievement}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              ) : null}
 
               {/* Social Links */}
               <div className="flex gap-4">
