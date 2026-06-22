@@ -45,7 +45,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "t5",
-    name: "Soumyadeep Roy Chowdhur",
+    name: "Soumyadeep Roy Chowdhury",
     position: "PR Coordinator",
     photo: "/member_photos/src.jpeg", 
     team: "pr",
