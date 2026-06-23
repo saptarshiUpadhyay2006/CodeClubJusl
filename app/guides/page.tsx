@@ -164,7 +164,7 @@ export default function GuidesPage() {
         {/* Filters & Search Section */}
         <div className="flex flex-col sm:flex-row items-center justify-between pb-6 border-b border-white/10 mb-10 gap-4">
           <h2 className="text-lg font-semibold uppercase tracking-wider text-white">
-            Available Guides ({filteredCompanyGuides.length})
+            Prepare with Precision
           </h2>
 
           <div className="relative w-full sm:w-80 group">
