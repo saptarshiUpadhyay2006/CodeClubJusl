@@ -2,12 +2,12 @@ import { TeamMember } from "@/types";
 
 export const teamCategories = [
   { key: "core", label: "Core Team" },
+  { key: "aiml", label: "AI/ML Team" },
   { key: "cp", label: "CP Team" },
   { key: "development", label: "Development Team" },
-  { key: "aiml", label: "AI/ML Team" },
   { key: "design", label: "Design Team" },
-  { key: "pr", label: "PR Team" },
   { key: "logistics", label: "Logistics Team" },
+  { key: "pr", label: "PR Team" },
   { key: "sponsorship", label: "Sponsorship Team" },
 ] as const;
 
@@ -88,6 +88,16 @@ export const teamMembers: TeamMember[] = [
       " Currently interning at Wells Fargo",
     ],
     socials: { linkedin: "https://www.linkedin.com/in/pramaray", github: "https://github.com/pramaray" },
+  },
+  {
+    id: "t27",
+    name: "Dipayan Sardar",
+    position: "Design Coordinator",
+    photo: "/member_photos/photo - Dipayan Sardar.jpeg",
+    team: "design",
+    graduationYear: 2028,
+    bio: "Second-year B.E. Civil Engineering student at Jadavpur University and BS Data Science student at IIT Madras. Intern at IIT Bombay, selected for AWS 10,000 Aldeas, GSSoC’26 contributor, and design team member at CodeClub JUSL , Core Member at E-Cell JU. Passionate about building AI, cloud, and data-driven solutions for real-world engineering and social-impact problems.",
+    socials: { linkedin: "https://www.linkedin.com/in/dipayan-sardar-a5119a381/", github: "https://github.com/dipayansardar73-decode" },
   },
   {
     id: "t5",
@@ -353,6 +363,18 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
+    id: "t20",
+    name: "Debarshi Mondal",
+    position: "Sponsorship Coordinator",
+    photo: "/member_photos/cc-photo-debarshi-mondal.jpeg",
+    team: "sponsorship",
+    graduationYear: 2027,
+    bio: "I am a passionate software developer with a strong interest in algorithms, problem-solving, and ML and DL . I enjoy building scalable applications using modern technologies and tackling complex technical challenges with efficient solutions. My analytical mindset and attention to detail help me approach problems methodically and effectively. I am naturally curious, enjoy learning new concepts, and continuously seek opportunities to expand my knowledge in software engineering and computational science. I am persistent, adaptable, and motivated by creating impactful and well-designed software systems and machine learning models.",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/debarshi-mondal-5567ba2a7/", github: "https://github.com/DebarshiMondal1055"
+    },
+  },
+  {
     id: "t21",
     name: "Swapnendu Chatterjee ",
     position: "Sponsorship Coordinator",
@@ -384,63 +406,63 @@ export const teamMembers: TeamMember[] = [
   },
 
   //Core Team
-  // {
-  //   id: "t25",
-  //   name: "Aritra Mondal",
-  //   position: "President",
-  //   photo: "/member_photos/WhatsApp Image 2026-06-21 at 11.01.39 AM.jpeg",
-  //   team: "core",
-  //   graduationYear: 2027,
-  //   bio: "I am a passionate and hardworking individual who is dedicated to contributing to the growth and success of Code Club JUSL. I have a strong interest in technology, problem-solving, and continuous learning. My goal is to lead the club towards achieving its objectives and fostering a collaborative and innovative environment for all members.",
-  //   achievements: [
-  //     "Research Intern @IIT Bombay(ISRO), IIT Patna, IIIT Bangalore and Jadavpur University ",
-  //     "Lead Organiser of Hackforge 2026 @Srijan 2026",
-  //     "Placement Coordinator @Jadavpur University",
-  //   ],
-  //   socials: { linkedin: "https://www.linkedin.com/in/aritra-mondal-b6712b28a/", github: "https://github.com/aritra-mondal-it" },
-  // },
-  // {
-  //   id: "t7",
-  //   name: "Rahul Pandey",
-  //   position: "Vice President",
-  //   photo: "/member_photos/img-20260505-wa0012-rahul-pandey.jpg",
-  //   team: "core",
-  //   graduationYear: 2027,
-  //   bio: "Full Stack Dev and Machine Learning Enthusiast",
-  //   achievements: [
-  //     "Internship at Wells Fargo",
-  //     "Made the Sherlocked'26 competition app",
-  //     "HackForge 2025 Winner",
-  //   ],
-  //   socials: { linkedin: "https://www.linkedin.com/in/rahul-pandey2005", github: "https://github.com/rahul-p19" },
-  // },
-  // {
-  //   id: "t13",
-  //   name: "Ankit Kundu",
-  //   position: "Treasurer",
-  //   photo: "/member_photos/20251222-153321-1-ankit-kundu.jpg",
-  //   team: "core",
-  //   graduationYear: 2027,
-  //   bio: "I have a lot of interest in competitive programming, but I often fall short in contests. Proudly. I am an amateur CP coder.",
-  //   achievements: [
-  //     "Internship at Sprinklr"
-  //   ],
-  //   socials: { linkedin: "https://www.linkedin.com/in/ankit-kundu-50522a2b2", github: "https://github.com/ankitkundu837" },
-  // },
-  // {
-  //   id: "t10",
-  //   name: "Swarnendu Banerjee",
-  //   position: "Treasurer",
-  //   photo: "/member_photos/img-20250912-wa0042-swarnendu-banerjee.jpg",
-  //   team: "core",
-  //   graduationYear: 2027,
-  //   bio: "Passionate about building scalable and reliable software systems, exploring distributed architectures, cloud technologies, observability, automation, and AI-driven solutions to improve system performance and reliability.",
-  //   achievements: [
-  //     "Winner at Hacktropica(MLH)",
-  //     "4th position in COMSYS Hackathon IV",
-  //     "Guardian@Leetcode",
-  //     "Internship at PayPal"
-  //   ],
-  //   socials: { linkedin: "https://www.linkedin.com/in/swarnendu-banerjee-78aa49298/", github: "https://github.com/Pookie-n-Rookie" },
-  // },
+  {
+    id: "t25",
+    name: "Aritra Mondal",
+    position: "President",
+    photo: "/member_photos/WhatsApp Image 2026-06-21 at 11.01.39 AM.jpeg",
+    team: "core",
+    graduationYear: 2027,
+    bio: "I am a passionate and hardworking individual who is dedicated to contributing to the growth and success of Code Club JUSL. I have a strong interest in technology, problem-solving, and continuous learning. My goal is to lead the club towards achieving its objectives and fostering a collaborative and innovative environment for all members.",
+    achievements: [
+      "Research Intern @IIT Bombay(ISRO), IIT Patna, IIIT Bangalore and Jadavpur University ",
+      "Lead Organiser of Hackforge 2026 @Srijan 2026",
+      "Placement Coordinator @Jadavpur University",
+    ],
+    socials: { linkedin: "https://www.linkedin.com/in/aritra-mondal-b6712b28a/", github: "https://github.com/aritra-mondal-it" },
+  },
+  {
+    id: "t7",
+    name: "Rahul Pandey",
+    position: "Vice President",
+    photo: "/member_photos/img-20260505-wa0012-rahul-pandey.jpg",
+    team: "core",
+    graduationYear: 2027,
+    bio: "Full Stack Dev and Machine Learning Enthusiast",
+    achievements: [
+      "Internship at Wells Fargo",
+      "Made the Sherlocked'26 competition app",
+      "HackForge 2025 Winner",
+    ],
+    socials: { linkedin: "https://www.linkedin.com/in/rahul-pandey2005", github: "https://github.com/rahul-p19" },
+  },
+  {
+    id: "t13",
+    name: "Ankit Kundu",
+    position: "Treasurer",
+    photo: "/member_photos/20251222-153321-1-ankit-kundu.jpg",
+    team: "core",
+    graduationYear: 2027,
+    bio: "I have a lot of interest in competitive programming, but I often fall short in contests. Proudly. I am an amateur CP coder.",
+    achievements: [
+      "Internship at Sprinklr"
+    ],
+    socials: { linkedin: "https://www.linkedin.com/in/ankit-kundu-50522a2b2", github: "https://github.com/ankitkundu837" },
+  },
+  {
+    id: "t10",
+    name: "Swarnendu Banerjee",
+    position: "Treasurer",
+    photo: "/member_photos/img-20250912-wa0042-swarnendu-banerjee.jpg",
+    team: "core",
+    graduationYear: 2027,
+    bio: "Passionate about building scalable and reliable software systems, exploring distributed architectures, cloud technologies, observability, automation, and AI-driven solutions to improve system performance and reliability.",
+    achievements: [
+      "Winner at Hacktropica(MLH)",
+      "4th position in COMSYS Hackathon IV",
+      "Guardian@Leetcode",
+      "Internship at PayPal"
+    ],
+    socials: { linkedin: "https://www.linkedin.com/in/swarnendu-banerjee-78aa49298/", github: "https://github.com/Pookie-n-Rookie" },
+  },
 ];
