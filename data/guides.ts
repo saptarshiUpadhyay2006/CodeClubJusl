@@ -337,12 +337,12 @@ export const interviewGuides: InterviewGuide[] = [
     "selected": true
   },
   {
-    "id": "placement-gyan-25",
-    "candidateName": "JUSL Alumni",
+    "id": "de-shaw-exp-shakya-25",
+    "candidateName": "Shakya Majumdar",
     "department": "Information Technology",
     "yearOfGrad": 2025,
     "company": "D.E. Shaw",
-    "pdfPath": "/guides/25 Batch Interview Experiences/DE Shaw/D.E.Shaw gyan.pdf",
+    "pdfPath": "/guides/25 Batch Interview Experiences/DE Shaw/D.E.Shaw exp.pdf",
     "experience": "General Placement & OA Structure Tips:\n1. OA (Day 1):\n   - DSA: mathematical observation (20 mins)\n   - Aptitude: MCQ (10 questions)\n   - Systems MCQs: OS, Networks, OOP, DBMS (15 questions)\n\n2. Technical Interviews (2 rounds):\n   - Introduction and programming background.\n   - Project discussions on CV (language choices, technology stack).\n   - In-depth questions about tools and languages used (Python GIL/CPython internals, Rust ownership/borrowing, git, bash, powershell).\n   - General CS Fundamentals (boot process, web requests lifecycle/DNS/networking).",
     "prepTips": "Focus on core CS fundamentals (OS, Networks, DBMS, OOP) and be extremely thorough with every item listed on your CV.",
     "selected": true
@@ -358,17 +358,7 @@ export const interviewGuides: InterviewGuide[] = [
     "prepTips": "Thoroughly practice problem-solving across core topics (Graphs, Trees, DSU, DP, Recursion) and focus on verbal communication of your thought process during dry runs.",
     "selected": true
   },
-  {
-    "id": "d.e.-shaw-compiled-26",
-    "candidateName": "Somyal Sinha, Atmik Goswami, Satwik Biswas",
-    "department": "Computer Science & Engineering",
-    "yearOfGrad": 2026,
-    "company": "D.E. Shaw",
-    "pdfPath": "/guides/26 Batch Interview Experiences/DE Shaw/INTERVIEW EXPERIENCES 26.pdf",
-    "experience": "Compiled interview experiences across companies for the 26 Batch, featuring details for D.E. Shaw technical and HR rounds shared by contributors Somyal Sinha, Atmik Goswami, and Satwik Biswas.",
-    "prepTips": "Prepare core systems concepts, database design, computer networks, and DSA topics. Be ready to explain your coding solutions and complexity analysis in detail.",
-    "selected": true
-  },
+
   {
     "id": "goldman-sachs-md.-adil-26",
     "candidateName": "Md. Adil",

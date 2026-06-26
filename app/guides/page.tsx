@@ -236,7 +236,7 @@ export default function GuidesPage() {
       let pdfTitle = "Interview Guide";
       if (guide.pdfPath.includes("gyan")) {
         pdfTitle = "Placement Gyan";
-      } else if (guide.pdfPath.includes("experience")) {
+      } else if (guide.pdfPath.includes("experience") || guide.pdfPath.includes("exp")) {
         pdfTitle = "Interview Experience";
       }
 
@@ -268,7 +268,7 @@ export default function GuidesPage() {
       let pdfTitle = "Interview Guide";
       if (guide.pdfPath.includes("gyan")) {
         pdfTitle = "Placement Gyan";
-      } else if (guide.pdfPath.includes("experience")) {
+      } else if (guide.pdfPath.includes("experience") || guide.pdfPath.includes("exp")) {
         pdfTitle = "Interview Experience";
       }
 
