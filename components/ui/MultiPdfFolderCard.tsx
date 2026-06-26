@@ -142,9 +142,11 @@ export default function MultiPdfFolderCard({
   const x = useMotionValue(0.5);
   const y = useMotionValue(0.5);
 
-  // Reduced tilt range (32 degree sweep) while preserving resting state
-  const rotateX = useSpring(useTransform(y, [0, 1], [22, -10]), { damping: 20, stiffness: 100 });
-  const rotateY = useSpring(useTransform(x, [0, 1], [-22, 10]), { damping: 20, stiffness: 100 });
+  const [hoveredPdfIndex, setHoveredPdfIndex] = useState<number | null>(null);
+
+  // Subtler 3D tilt sweep to improve stability and make selecting easy
+  const rotateX = useSpring(useTransform(y, [0, 1], [10, -10]), { damping: 25, stiffness: 120 });
+  const rotateY = useSpring(useTransform(x, [0, 1], [-10, 10]), { damping: 25, stiffness: 120 });
 
   // Parallax offsets for Layer 3 (Front Cover Content)
   const coverContentX = useSpring(useTransform(x, [0, 1], [9, -9]), { damping: 20, stiffness: 100 });
@@ -209,8 +211,15 @@ export default function MultiPdfFolderCard({
 
   const showHoverState = isActive || isHovered;
 
+  useEffect(() => {
+    if (hoveredPdfIndex !== null) {
+      x.set(0.5);
+      y.set(0.5);
+    }
+  }, [hoveredPdfIndex, x, y]);
+
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current) return;
+    if (!cardRef.current || hoveredPdfIndex !== null) return;
     const rect = cardRef.current.getBoundingClientRect();
     const width = rect.width;
     const height = rect.height;
@@ -226,6 +235,7 @@ export default function MultiPdfFolderCard({
 
   const handleMouseLeave = () => {
     setIsHovered(false);
+    setHoveredPdfIndex(null);
     x.set(0.5);
     y.set(0.5);
   };
@@ -327,9 +337,46 @@ export default function MultiPdfFolderCard({
         {/* Layer 2: Multiple Inner Document Sheets (Fanned out left and right) */}
         {pdfs.map((pdf, idx) => {
           const isLeft = idx === 0;
+          const isFocused = hoveredPdfIndex === idx;
+          const isAnyFocused = hoveredPdfIndex !== null;
+          const isDimmed = isAnyFocused && !isFocused;
+
           const fanRotate = showHoverState ? (isLeft ? -12 : 12) : 0;
           const fanX = showHoverState ? (isLeft ? -110 : 110) : 0;
           const fanY = showHoverState ? (isParent ? -135 : -115) : (isParent ? 50 : 42);
+
+          // 3D V-reveal animation parameters
+          const targetX = showHoverState 
+            ? (isFocused ? (isLeft ? -65 : 65) : (isLeft ? -110 : 110)) 
+            : 0;
+
+          const targetY = showHoverState 
+            ? (isFocused ? (isParent ? -145 : -125) : fanY) 
+            : (isParent ? 50 : 42);
+
+          const targetRotate = showHoverState 
+            ? (isFocused ? 0 : fanRotate) 
+            : 0;
+
+          const targetRotateY = showHoverState 
+            ? (isFocused ? 0 : (isLeft ? 25 : -25)) 
+            : 0;
+
+          const targetZ = showHoverState 
+            ? (isFocused ? 160 : (isDimmed ? 15 : (isLeft ? 45 : 50))) 
+            : 20;
+
+          const targetScale = showHoverState 
+            ? (isFocused ? 1.06 : (isDimmed ? 0.90 : 0.98)) 
+            : 0.96;
+
+          const targetOpacity = showHoverState 
+            ? (isDimmed ? 0.25 : 1) 
+            : 1;
+
+          const targetZIndex = showHoverState 
+            ? (isFocused ? 50 : (isDimmed ? 12 : (isLeft ? 25 : 26))) 
+            : 10;
 
           return (
             <motion.a
@@ -340,21 +387,17 @@ export default function MultiPdfFolderCard({
               onClick={(e) => {
                 e.stopPropagation(); // Avoid triggering card toggles when clicking a sheet
               }}
+              onMouseEnter={() => setHoveredPdfIndex(idx)}
+              onMouseLeave={() => setHoveredPdfIndex(null)}
               animate={{
-                y: fanY,
-                x: fanX,
-                rotate: fanRotate,
-                scale: showHoverState ? 0.98 : 0.96,
-                opacity: 1,
-                z: showHoverState ? (isLeft ? 45 : 50) : 20,
-              }}
-              whileHover={{
-                scale: 1.05,
-                z: 160,
-                y: showHoverState ? (isParent ? -145 : -125) : fanY,
-                x: showHoverState ? (isLeft ? -70 : 70) : fanX,
-                rotate: 0,
-                transition: { duration: 0.25, ease: "easeOut" },
+                y: targetY,
+                x: targetX,
+                rotate: targetRotate,
+                rotateY: targetRotateY,
+                scale: targetScale,
+                opacity: targetOpacity,
+                z: targetZ,
+                zIndex: targetZIndex,
               }}
               transition={{ type: "spring", stiffness: 120, damping: 20, delay: showHoverState ? (isLeft ? 0 : 0.05) : 0 }}
               className={`absolute left-[3%] w-[94%] bg-[#1a1a1a] border border-white/10 border-t-white/25 rounded-xl p-4 flex flex-col justify-between shadow-2xl transition-all duration-300 cursor-pointer ${
@@ -363,7 +406,6 @@ export default function MultiPdfFolderCard({
               style={{
                 transformStyle: "preserve-3d",
                 pointerEvents: showHoverState ? "auto" : "none",
-                zIndex: showHoverState ? (isLeft ? 25 : 26) : 10,
               }}
             >
               <div className="flex flex-col">
