@@ -407,7 +407,7 @@ export default function FolderCard({
         }}
         className={`absolute bottom-0 left-0 w-full rounded-2xl bg-gradient-to-br from-neutral-900 to-[#101010] border border-t-white/20 p-4 flex flex-col justify-between overflow-hidden z-20 transition-colors duration-500 ${
           isParent ? "h-[295px]" : "h-[245px]"
-        } ${showHoverState ? brand.borderHover : brand.border}`}
+        } ${showHoverState ? brand.borderHover : brand.border} ${isTouch && showHoverState ? "pointer-events-none" : ""}`}
       >
         {/* Spotlight Cursor */}
         <div
